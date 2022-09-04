@@ -1,0 +1,57 @@
+@use './var';
+
+.modal-overlay{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color:rgba(73, 166, 233, 0.5);
+    display: grid;
+    place-items: center;
+    transition: var.$transition;
+}
+
+// .open-modal{
+//     // visibility: hidden;
+//     // z-index: -10;
+// }
+
+.modal-container{
+    background-color: var.$clr-white;
+    border-radius: var.$radius;
+    width: 90vw;
+    height: 30vh;
+    max-width: var.$fixed-width;
+    text-align: center;
+    display: grid;
+    place-items: center;
+    position: relative;
+}
+
+h3{
+    font-size: 1.25rem;
+}
+
+.close-btn{
+    position: absolute;
+    top: 0.5em;
+    right: 0.5em;
+    font-size: 2rem;
+    background-color: transparent;
+    border: transparent;
+    color: var.$clr-red-dark;
+    cursor: pointer;
+    transition: var.$transition;
+}
+
+.fa-times{
+    font-weight: 900;
+    font-family: "Font Awesome 5 Free";
+    -webkit-font-smoothing: antialiased;
+    display: inline-block;
+    font-style: normal;
+    font-variant: normal;
+    text-rendering: auto;
+    line-height: 1;
+}
